@@ -3,7 +3,7 @@ class building {
         this.buildingName = buildingName;
         this.baseCps = baseCps / (1000 / tickRate);
         this.baseCost = baseCost
-        this.Cost = baseCost;
+        this.cost = baseCost;
         this.buttonId = buttonId;
         this.amountOwned = 0;
         this.cps = 0;
@@ -12,23 +12,24 @@ class building {
     }
 
     purchase() {
-        score-= this.Cost;
+        score -= this.cost;
         this.amountOwned++;
         this.cps = this.baseCps * this.amountOwned;
-        this.cost = Math.ceil(this.cost * 1.15** this.amountOwned);
+        this.cost = Math.ceil(this.cost * 1.15);
     }
 
     buttonState() {
         if (!this.visible) {
-            document.getElementById(this.buttonId).style.display = "none";
+            document.getElementById(this.buttonId).style.display = 'none';
             if (score >= this.baseCost) {
                 this.visible = true;
-                ocument.getElementById(this.buttonId).style.display = "initial";
+                document.getElementById(this.buttonId).style.display = 'initial';
             }
         }
         if (score < this.cost) {
             document.getElementById(this.buttonId).disabled = true;
-         } else {
+        } 
+        else {
                 document.getElementById(this.buttonId).disabled = false;
             }
             document.getElementById(this.buttonId).innerHTML = "Buy" + this.buildingName + 
