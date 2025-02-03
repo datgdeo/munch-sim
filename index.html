@@ -3,16 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css" />
     <script src="src/building.js"></script>
+    <script src="src/upgrade.js"></script>
+    <script src="src/betterMachine.js"></script>
+    <script src="src/celebrityCookieDesigns.js"></script>
     <script src="src/main.js"></script>
     <title>Munch Simulator</title>
 </head>
 <body>
+    <header>
     <h1>Munch Simulator</h1>
-    <h2>replace this later</h2>
+
+    <h2>You're a new cookie business owner looking to improve the speed process and designs of your cookies... </h2>
+    </header>
+
+    <div class="outer">
+        <div class="click">
     <h3>Score: <span class="score" id="score">0</span></h3>
+
     <button type="button" onclick="scorePlusPlus()">Click ME!</button>
+        </div>
+
+    <div class="store">
+        <div class="buildings">
+            <div class="store-title">
     <h4>Buildings:</h4>
-    <button type="button" id="buyAutoclicker" onclick="autoclicker.purchase">Buy Autoclicker</button>
-</body>
+        </div>
+
+    <button class="button" type="button" id="buyAutoclicker" onclick="autoclicker.purchase()">Buy Autoclicker</button>
+    <button class="button" type="button" id="buyWorker" onclick="worker.purchase()">Buy Worker</button>
+    <button class="button" type="button" id="buyWorker2" onclick="worker2.purchase()">Buy Worker 2</button>
+    <button class="button" type="button" id="buyMachine" onclick="machine.purchase()">Buy Machine</button>
+    <button class="button" type="button" id="buyCookieDecorator" onclick="cookieDecorator.purchase()">Buy Cookie Decorator</button>
+    <button class="button" type="button" id="buyLimitedEditionCookies" onclick="limitedEditionCookies.purchase()">Buy Limited Edition Cookies</button>
+
+</div>
+<div class="upgrades">
+    <div class="store-title">
+
+    <h5>Upgrades</h5>
+    </div>
+
+    <button class="button" type ="button" id="buyBetterMachine" onclick="betterMachine.purchase()">Buy Better Machine</button>
+    <button class="button" type="button" id="buyFasterMachine" onclick="fasterMachine.purchase()">Buy Faster Machine</button>
+    <button class="button" type="button" id="buyCelebrityCookieDesigns" onclick="celebrityCookieDesigns.purchase()">Buy Celebrity Cookie Designs</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    
 </html>
