@@ -6,6 +6,11 @@ class Upgrade {
         this.owned = false;
     }
 
+    purchase () {
+        score -= this.cost;
+        this.owned = false;
+    }
+
     buttonState() {
         if (this.owned) {
             document.getElementById(this.buttonId).style.display = 'none';
