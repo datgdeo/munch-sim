@@ -1,5 +1,8 @@
 body {
     margin: 0 15% 0 15%;
+    background-image: url(../media/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -8,10 +11,12 @@ header {
 
 header > h2 {
     font-style: italic;
+    color: brown;
 }
 
 div.outer {
     border: 4px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 div.click {
